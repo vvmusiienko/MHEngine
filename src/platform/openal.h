@@ -16,7 +16,7 @@
 #elif IPHONE_OS
 	#include <OpenAL/al.h>
 	#include <OpenAL/alc.h>
-	#include "../alut/alut.h"
+	#include "alut.h"
 #endif
 
 
