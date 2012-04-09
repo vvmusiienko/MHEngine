@@ -543,8 +543,9 @@
 		5673A14E1531CB4100AE212E /* Texture.h in Headers */ = {isa = PBXBuildFile; fileRef = 5673A0BD1531CB4100AE212E /* Texture.h */; };
 		5673A14F1531CB4100AE212E /* TextureCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 5673A0BE1531CB4100AE212E /* TextureCache.h */; };
 		5685BBDA12098285001F49EA /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5685BBD912098285001F49EA /* OpenAL.framework */; };
-		56BDC01B12C0B8270075BC1B /* glu.h in Headers */ = {isa = PBXBuildFile; fileRef = 56BDC01912C0B8270075BC1B /* glu.h */; };
-		56BDC01C12C0B8270075BC1B /* gluos.h in Headers */ = {isa = PBXBuildFile; fileRef = 56BDC01A12C0B8270075BC1B /* gluos.h */; };
+		56AD1D7D153302510073239F /* alut.h in Headers */ = {isa = PBXBuildFile; fileRef = 56AD1D7A153302510073239F /* alut.h */; };
+		56AD1D7E153302510073239F /* glu.h in Headers */ = {isa = PBXBuildFile; fileRef = 56AD1D7B153302510073239F /* glu.h */; };
+		56AD1D7F153302510073239F /* gluos.h in Headers */ = {isa = PBXBuildFile; fileRef = 56AD1D7C153302510073239F /* gluos.h */; };
 		AA747D9F0F9514B9006C5449 /* IPhoneMHEngine_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* IPhoneMHEngine_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -1096,8 +1097,9 @@
 		5673A0BD1531CB4100AE212E /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
 		5673A0BE1531CB4100AE212E /* TextureCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureCache.h; sourceTree = "<group>"; };
 		5685BBD912098285001F49EA /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
-		56BDC01912C0B8270075BC1B /* glu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glu.h; sourceTree = "<group>"; };
-		56BDC01A12C0B8270075BC1B /* gluos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gluos.h; sourceTree = "<group>"; };
+		56AD1D7A153302510073239F /* alut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = alut.h; sourceTree = "<group>"; };
+		56AD1D7B153302510073239F /* glu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glu.h; sourceTree = "<group>"; };
+		56AD1D7C153302510073239F /* gluos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gluos.h; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* IPhoneMHEngine_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPhoneMHEngine_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libIPhoneMHEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIPhoneMHEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1128,12 +1130,12 @@
 		0867D691FE84028FC02AAC07 /* IPhoneMHEngine */ = {
 			isa = PBXGroup;
 			children = (
-				5673A0201531CB4100AE212E /* src */,
 				5673A01E1531C9C200AE212E /* libGLU_universal.a */,
+				5673A0201531CB4100AE212E /* src */,
+				56AD1D79153302510073239F /* includes */,
 				56739FA81531C98600AE212E /* lua-5.1.4 */,
 				56739D031531C94800AE212E /* bullet-2.77 */,
 				566B812E131D89490055EEC6 /* alut */,
-				56BDC01812C0B8130075BC1B /* Includes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
@@ -1989,13 +1991,14 @@
 			path = renderfilter;
 			sourceTree = "<group>";
 		};
-		56BDC01812C0B8130075BC1B /* Includes */ = {
+		56AD1D79153302510073239F /* includes */ = {
 			isa = PBXGroup;
 			children = (
-				56BDC01912C0B8270075BC1B /* glu.h */,
-				56BDC01A12C0B8270075BC1B /* gluos.h */,
+				56AD1D7A153302510073239F /* alut.h */,
+				56AD1D7B153302510073239F /* glu.h */,
+				56AD1D7C153302510073239F /* gluos.h */,
 			);
-			name = Includes;
+			path = includes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2006,8 +2009,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA747D9F0F9514B9006C5449 /* IPhoneMHEngine_Prefix.pch in Headers */,
-				56BDC01B12C0B8270075BC1B /* glu.h in Headers */,
-				56BDC01C12C0B8270075BC1B /* gluos.h in Headers */,
 				566B8140131D89490055EEC6 /* alut.h in Headers */,
 				566B8146131D89490055EEC6 /* alutInternal.h in Headers */,
 				56739E631531C94800AE212E /* btBulletCollisionCommon.h in Headers */,
@@ -2311,6 +2312,9 @@
 				5673A14C1531CB4100AE212E /* Tests.h in Headers */,
 				5673A14E1531CB4100AE212E /* Texture.h in Headers */,
 				5673A14F1531CB4100AE212E /* TextureCache.h in Headers */,
+				56AD1D7D153302510073239F /* alut.h in Headers */,
+				56AD1D7E153302510073239F /* glu.h in Headers */,
+				56AD1D7F153302510073239F /* gluos.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
